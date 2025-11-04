@@ -181,9 +181,7 @@
       const wrapper=slides[currentSlide].querySelector('.polaroid-wrapper');
       if(wrapper){
         const polaroids=wrapper.querySelectorAll('.polaroid');
-        polaroids.forEach((p,idx)=>{
-          setTimeout(()=>p.classList.add('show'), idx*500);
-        });
+        polaroids.forEach((p,idx)=>{setTimeout(()=>p.classList.add('show'),idx*500);});
       }
     }
 
@@ -196,7 +194,6 @@
       };
       document.addEventListener('click',playMusic);
 
-      // musik fade in/out pas video main
       videos.forEach(v=>{
         v.addEventListener('play',()=>fadeMusicOut());
         v.addEventListener('pause',()=>fadeMusicIn());
